@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "conversion-audit": {
+      "command": "node",
+      "args": ["mcp/server.ts"]
+    },
+    "orion": {
+      "type": "http",
+      "url": "https://app.paradigmmachines.ai/mcp"
+    }
+  }
+}

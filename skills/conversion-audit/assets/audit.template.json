@@ -1,0 +1,158 @@
+{
+  "schema": "conversion-audit/1",
+  "site": "example-plumbing.com",
+  "slug": "example-plumbing-2026-11-17",
+  "date": "2026-11-17",
+  "mode": "full",
+  "owner": "client",
+  "intake": {
+    "url": "https://example-plumbing.com/emergency",
+    "goal": "phone call",
+    "traffic": "Google search ads, about 80% phone",
+    "promise": "24/7 emergency plumber. Arrives in 60 minutes.",
+    "customer": "Homeowner with a leak, problem-aware",
+    "doubt": "UNKNOWN",
+    "numbers": "UNKNOWN",
+    "tried": "UNKNOWN"
+  },
+  "evidence": {
+    "capture": "screenshots",
+    "analytics": false,
+    "recordings": false,
+    "customer_words": [
+      "Google reviews, 40 most recent, read 2026-11-17"
+    ],
+    "predicted_attention": false
+  },
+  "voc": [
+    {
+      "id": "VOC-P1",
+      "quote": "Waited two days for a callback",
+      "source": "https://example.com/reviews",
+      "date": "2026-11-17"
+    }
+  ],
+  "benchmark": [
+    {
+      "rival": "rival-plumbing.com",
+      "promise": "Same-day plumber, no call-out fee",
+      "offer": "Free quote",
+      "proof": "4.9 from 610 reviews",
+      "screen": "screens/rival-01-phone.png"
+    }
+  ],
+  "page_job": {
+    "traffic": "cold search ads",
+    "job": "local service",
+    "fits": true,
+    "note": ""
+  },
+  "steps": [
+    {
+      "id": "01",
+      "name": "Ad to landing page",
+      "screens": [
+        "screens/step-01-phone.png",
+        "screens/step-01-phone-full.png",
+        "screens/step-01-desktop.png"
+      ],
+      "scores": {
+        "match": 1,
+        "clarity": 2,
+        "hook": 1,
+        "desire": 2,
+        "offer": 1,
+        "trust": 0,
+        "friction": 2,
+        "action": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "order": 1,
+      "name": "Hero",
+      "answers": "what is this",
+      "keep": true
+    },
+    {
+      "order": 2,
+      "name": "About us",
+      "answers": "nothing the visitor asked",
+      "keep": false
+    }
+  ],
+  "floor": {
+    "loads_on_phone": "pass",
+    "core_web_vitals": "fail",
+    "primary_action_works": "unknown",
+    "links_resolve": "pass",
+    "conversion_tracked": "fail",
+    "tap_to_call": "pass",
+    "contrast": "pass",
+    "keyboard": "unknown",
+    "labels": "pass",
+    "nothing_covers_action": "fail",
+    "honest_data": "pass",
+    "https": "pass"
+  },
+  "bottleneck": "Most visitors leave at the landing page because the ad's 60-minute promise is missing from the first screen.",
+  "findings": [
+    {
+      "id": "F1",
+      "lens": "match",
+      "step": "01",
+      "see": "Ad promises 'Arrives in 60 minutes'. First phone screen says 'Quality plumbing since 1998'.",
+      "screen": "screens/step-01-phone.png",
+      "why": "Visitors scan for the promise they tapped on and assume they are in the wrong place.",
+      "fix": "Headline: '24/7 emergency plumber. With you in 60 minutes.' Tap-to-call button under it.",
+      "evidence": [
+        "heuristic",
+        "technical"
+      ],
+      "bucket": "fix-now",
+      "status": "OBSERVATION",
+      "priority": {
+        "most_traffic": true,
+        "first_screen": true,
+        "noticeable": true,
+        "bottleneck": true,
+        "adds_or_removes": false,
+        "extra_evidence": 1,
+        "effort": "hour"
+      },
+      "element": {
+        "selector": "main > section:nth-of-type(1) > h1",
+        "box": {
+          "x": 16,
+          "y": 96,
+          "width": 358,
+          "height": 84
+        },
+        "device": "phone"
+      }
+    }
+  ],
+  "fix_first": "F1",
+  "rewrites": {
+    "headlines": [
+      "24/7 emergency plumber. With you in 60 minutes."
+    ],
+    "subheadline": "",
+    "button": "",
+    "under_button": "",
+    "doubt_answer": "",
+    "offer_stack": [],
+    "form": ""
+  },
+  "to_make_true": [
+    {
+      "idea": "Guarantee arrival within 60 minutes",
+      "unlocks": "With you in 60 minutes or the call-out is free",
+      "needs": "Owner sign-off on the policy"
+    }
+  ],
+  "tests": [],
+  "questions": [],
+  "limits": []
+}
